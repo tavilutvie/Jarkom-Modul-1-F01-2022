@@ -5,8 +5,74 @@
 | No.  | NRP        | NAMA                       |
 | ---  | ---------- | -------------------------- |
 | 1.   | 5025201213 | Eldenabih Tavirazin Lutvie |
-| 2.   |  |      |
-| 3.   |  |      |
+| 2.   |  | Nouval Bachrezi     |
+| 3.   |  | Marsa A    |
+
+## Soal 1-2
+1. Sebutkan web server yang digunakan pada "monta.if.its.ac.id"! <br>
+2. Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ? <br>
+
+## 1
+Filter http dengan host 'monta.if.its.ac.id'.
+```
+http.host == monta.if.its.ac.id
+```
+![1 1111111](https://user-images.githubusercontent.com/85897222/192103949-dd6934be-259b-40f5-a51e-abcf60a8aefe.png)
+
+Follow tcp stream untuk melihat detail.
+![1 2222222](https://user-images.githubusercontent.com/85897222/192103959-2c2c4f6a-185c-4d61-95a5-0fe3ea372313.png)
+
+## 2
+Filter http yang mengandung 'detailTopik'.
+```
+http.request.uri contains "detailTopik"
+```
+![1 333](https://user-images.githubusercontent.com/85897222/192103966-5273c778-d517-48a1-920d-87ab624233ca.png)
+
+Export dan buka html 194, disana kita akan menemukan judul topiknya.
+![1 4444444444](https://user-images.githubusercontent.com/85897222/192103972-b911dbbb-3dc5-43e2-b50c-2dfa09df875e.png)
+
+
+## Soal 3-7
+3. Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! <br>
+4. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21! <br>
+5. Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443! <br>
+6. Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id ! <br>
+7. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian! <br>
+
+## 3
+Filter udp dan tcp dengan destination port 80
+```
+udp.dstport == 80 || tcp.dstport == 80
+```
+![image](https://user-images.githubusercontent.com/85897222/192104005-4262005c-049f-4188-a356-4b89fdc90f64.png)
+
+## 4
+Filter udp dan tcp dengan source port 21
+```
+udp.srcport == 21 || tcp.srcport == 21
+```
+![image](https://user-images.githubusercontent.com/85897222/192104024-229a7c3a-139e-4d46-b44b-64cc3939b1ff.png)
+
+## 5
+Filter udp dan tcp dengan source port 443
+```
+udp.srcport == 443 || tcp.srcport == 443
+```
+![image](https://user-images.githubusercontent.com/85897222/192104036-c8a7df64-c572-436a-a6aa-b85c26045820.png)
+
+## 6
+Filter udp dan tcp yang mengandung lipi.go.id
+```
+udp contains lipi.go.id || tcp contains lipi.go.id
+```
+![image](https://user-images.githubusercontent.com/85897222/192104040-f001d84d-1456-4095-ae15-a4fce899e583.png)
+
+## 7
+Filter ip dengan source ip sendiri
+```
+ip.src == 125.167.32.175
+```
 
 ## Soal 8-10
 Di sebuah planet bernama Viltrumite, terdapat Kementerian Komunikasi dan Informatika yang baru saja menetapkan kebijakan baru. Dalam kebijakan baru tersebut, pemerintah dapat mengakses data pribadi masyarakat secara bebas jika memang dibutuhkan, baik dengan maupun tanpa persetujuan pihak yang bersangkutan. Sebagai mahasiswa yang sedang melaksanakan program magang di kementerian tersebut, kalian mendapat tugas berupa penyadapan percakapan mahasiswa yang diduga melakukan tindak kecurangan dalam kegiatan Praktikum Komunikasi Data dan Jaringan Komputer 2022. Selain itu, terdapat sebuah password rahasia (flag) yang diduga merupakan milik sebuah organisasi bawah tanah yang selama ini tidak sejalan dengan pemerintahan Planet Viltrumite. Tunggu apa lagi, segera kerjakan tugas magang tersebut agar kalian bisa mendapatkan pujian serta kenaikan jabatan di kementerian tersebut!
