@@ -24,12 +24,12 @@ Filter tcp yang mengandung kata "soal".
 tcp contains soal
 ```
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192097359-2b4ceea8-310c-422d-b0a7-2f07543370f1.png)
+![1111111](https://user-images.githubusercontent.com/85897222/192097628-da644849-9406-428a-8d5f-c5dedfb8eb76.png)
 
 <br>
 Untuk mendapatkan percakapan, langkah yang harus dikerjakan adalah follow tcp stream.
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192097370-aac6ca82-3069-445a-b914-1d941b57fe3c.png)
+![2222222222222](https://user-images.githubusercontent.com/85897222/192097643-718b9b19-4c99-4c25-868e-e521cad17a78.png)
 
 <br>
 Kata-kata kunci yang terkandung pada percakapan tersebut:
@@ -41,11 +41,11 @@ Filter tcp dengan port 9002
 tcp.srcport == 9002
 ```
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192097408-b434f9e9-ec8e-456a-8cf4-7f7a6454b917.png)
+![33333333333](https://user-images.githubusercontent.com/85897222/192097650-3ec1f50d-2f74-45f0-9262-de43da4b7a92.png)
 <br>
 Follow tcp stream
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192097439-05760327-554c-47a1-92c0-9320db58d964.png)
+![4444444444](https://user-images.githubusercontent.com/85897222/192097656-68039619-6bb6-4941-8f90-2c53b5d439f4.png)
 
 <br>
 File di download dan di ekstrak
@@ -53,7 +53,7 @@ File di download dan di ekstrak
 openssl des3 -d -salt -in F01.des3 -out flag.txt -k nakano
 ```
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192097470-aa75bf4b-7925-46c4-99a1-ae9ddd1816e9.png)
+![5555555555555](https://user-images.githubusercontent.com/85897222/192097660-04c7e3ea-d0d9-40d0-8f91-f300603d4af2.png)
 
 
 ## No 10
