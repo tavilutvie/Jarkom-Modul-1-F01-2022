@@ -2,17 +2,17 @@
 
 ## Anggota Kelompok
 
-| No.  | NRP        | NAMA                       |
-| ---  | ---------- | -------------------------- |
-| 1.   | 5025201213 | Eldenabih Tavirazin Lutvie |
-| 2.   |  | Nouval Bachrezi     |
-| 3.   |  | Marsa A    |
+| No.  | NRP            | NAMA                       |
+| ---  | -------------- | -------------------------- |
+| 1.   | 5025201213     | Eldenabih Tavirazin Lutvie |
+| 2.   | 5025201030     | Mohammad Nouval Bachrezi   |
+| 3.   | 05111940000220 | Marsa Aushaf Rafi          |
 
 ## Soal 1-2
 1. Sebutkan web server yang digunakan pada "monta.if.its.ac.id"! <br>
 2. Ishaq sedang bingung mencari topik ta untuk semester ini , lalu ia datang ke website monta dan menemukan detail topik pada website “monta.if.its.ac.id” , judul TA apa yang dibuka oleh ishaq ? <br>
 
-## 1
+## No 1
 Filter http dengan host 'monta.if.its.ac.id'.
 ```
 http.host == monta.if.its.ac.id
@@ -22,7 +22,7 @@ http.host == monta.if.its.ac.id
 Follow tcp stream untuk melihat detail.
 ![1 2222222](https://user-images.githubusercontent.com/85897222/192103959-2c2c4f6a-185c-4d61-95a5-0fe3ea372313.png)
 
-## 2
+## No 2
 Filter http yang mengandung 'detailTopik'.
 ```
 http.request.uri contains "detailTopik"
@@ -40,35 +40,35 @@ Export dan buka html 194, disana kita akan menemukan judul topiknya.
 6. Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id ! <br>
 7. Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian! <br>
 
-## 3
+## No 3
 Filter udp dan tcp dengan destination port 80
 ```
 udp.dstport == 80 || tcp.dstport == 80
 ```
 ![image](https://user-images.githubusercontent.com/85897222/192104005-4262005c-049f-4188-a356-4b89fdc90f64.png)
 
-## 4
+## No 4
 Filter udp dan tcp dengan source port 21
 ```
 udp.srcport == 21 || tcp.srcport == 21
 ```
 ![image](https://user-images.githubusercontent.com/85897222/192104024-229a7c3a-139e-4d46-b44b-64cc3939b1ff.png)
 
-## 5
+## No 5
 Filter udp dan tcp dengan source port 443
 ```
 udp.srcport == 443 || tcp.srcport == 443
 ```
 ![image](https://user-images.githubusercontent.com/85897222/192104036-c8a7df64-c572-436a-a6aa-b85c26045820.png)
 
-## 6
+## No 6
 Filter udp dan tcp yang mengandung lipi.go.id
 ```
 udp contains lipi.go.id || tcp contains lipi.go.id
 ```
 ![image](https://user-images.githubusercontent.com/85897222/192104040-f001d84d-1456-4095-ae15-a4fce899e583.png)
 
-## 7
+## No 7
 Filter ip dengan source ip sendiri
 ```
 ip.src == 125.167.32.175
