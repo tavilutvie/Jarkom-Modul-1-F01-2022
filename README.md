@@ -24,11 +24,13 @@ Filter tcp yang mengandung kata "soal".
 tcp contains soal
 ```
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192096472-19d0743c-0462-46dd-a8d0-113bab6bfe74.png)
+![image](https://user-images.githubusercontent.com/85897222/192097359-2b4ceea8-310c-422d-b0a7-2f07543370f1.png)
+
 <br>
 Untuk mendapatkan percakapan, langkah yang harus dikerjakan adalah follow tcp stream.
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192096561-8f884e58-7b86-4713-a41c-42ef79ff1f88.png)
+![image](https://user-images.githubusercontent.com/85897222/192097370-aac6ca82-3069-445a-b914-1d941b57fe3c.png)
+
 <br>
 Kata-kata kunci yang terkandung pada percakapan tersebut:
 openssl, des3, file: salt, port: 9002, clue password: karakter anime kembar lima
@@ -39,18 +41,20 @@ Filter tcp dengan port 9002
 tcp.srcport == 9002
 ```
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192096793-ff1bf818-df8f-4f89-abfc-6033ac68d3b3.png)
+![image](https://user-images.githubusercontent.com/85897222/192097408-b434f9e9-ec8e-456a-8cf4-7f7a6454b917.png)
 <br>
 Follow tcp stream
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192096849-78c71434-0768-47a6-b761-6b94ea577cb5.png)
+![image](https://user-images.githubusercontent.com/85897222/192097439-05760327-554c-47a1-92c0-9320db58d964.png)
+
 <br>
 File di download dan di ekstrak
 ```
 openssl des3 -d -salt -in F01.des3 -out flag.txt -k nakano
 ```
 <br>
-![image](https://user-images.githubusercontent.com/85897222/192096940-015e8a0a-8f4e-4971-a734-fad30a604310.png)
+![image](https://user-images.githubusercontent.com/85897222/192097470-aa75bf4b-7925-46c4-99a1-ae9ddd1816e9.png)
+
 
 ## No 10
 Buka file flag.txt
